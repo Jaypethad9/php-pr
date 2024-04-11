@@ -1,0 +1,37 @@
+<?php
+// Set the default timezone
+date_default_timezone_set('UTC');
+
+// Get the current date and time
+$currentDateTime = date('Y-m-d H:i:s');
+echo "Current Date and Time: $currentDateTime<br>";
+
+// Get the current date
+$currentDate = date('Y-m-d');
+echo "Current Date: $currentDate<br>";
+
+// Get the current time
+$currentTime = date('H:i:s');
+echo "Current Time: $currentTime<br>";
+
+// Get the day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+$dayOfWeek = date('w');
+echo "Day of the Week: $dayOfWeek<br>";
+
+// Get the current year
+$currentYear = date('Y');
+echo "Current Year: $currentYear<br>";
+
+// Get the current month
+$currentMonth = date('F');
+echo "Current Month: $currentMonth<br>";
+
+// Get the number of days in the current month
+$daysInMonth = date('t');
+echo "Number of Days in Current Month: $daysInMonth<br>";
+
+// Get the current week number
+$currentWeek = date('W');
+echo "Current Week Number: $currentWeek<br>";
+?>
+

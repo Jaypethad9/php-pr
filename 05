@@ -1,0 +1,32 @@
+<?php
+
+// Sample associative array
+$associativeArray = array(
+    "banana" => 2,
+    "apple" => 5,
+    "orange" => 3
+);
+
+// Sorting associative array by keys
+ksort($associativeArray);
+echo "Sorted associative array by keys:\n";
+print_r($associativeArray);
+
+// Sorting associative array by values
+asort($associativeArray);
+echo "Sorted associative array by values:\n";
+print_r($associativeArray);
+
+// Sample multidimensional array
+$multidimensionalArray = array(
+    array("name" => "John", "age" => 30),
+    array("name" => "Alice", "age" => 25),
+    array("name" => "Bob", "age" => 35)
+);
+
+// Sorting multidimensional array by a specific key
+array_multisort(array_column($multidimensionalArray, 'age'), SORT_ASC, $multidimensionalArray);
+echo "Sorted multidimensional array by age:\n";
+print_r($multidimensionalArray);
+
+?>

@@ -1,0 +1,17 @@
+<?php
+
+setcookie("user", "John Doe", time() + 3600);
+
+
+if(isset($_COOKIE["user"])) {
+    // Retrieve and display the value of the cookie
+    echo "Welcome back, " . $_COOKIE["user"] . "!<br>";
+
+
+    setcookie("user", "", time() - 3600);
+    echo "Cookie 'user' is deleted.";
+} else {
+    // If the cookie is not set, display a default message
+    echo "Welcome, new visitor!";
+}
+?>

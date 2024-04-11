@@ -1,0 +1,11 @@
+<?php
+// Get all defined functions
+$functions = get_defined_functions();
+
+// Print out the list of functions
+echo "Defined functions:\n" .$functions ;
+foreach ($functions['user'] as $function) {
+    echo $function . "\n";
+}
+?>
+

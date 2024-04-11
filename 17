@@ -1,0 +1,21 @@
+<?php
+// Sample numbers
+$number1 = 10;
+$number2 = 5;
+
+// 1. abs() - returns the absolute value of a number
+$absoluteValue = abs(-10);
+echo "Absolute Value: $absoluteValue<br>";
+
+// 2. pow() - returns the result of raising a number to a specified power
+$power = pow($number1, $number2);
+echo "Power: $power<br>";
+
+// 3. sqrt() - returns the square root of a number
+$squareRoot = sqrt(25);
+echo "Square Root: $squareRoot<br>";
+
+// 4. rand() - generates a random integer
+$randomNumber = rand(1, 100);
+echo "Random Number: $randomNumber<br>";
+?>

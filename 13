@@ -1,0 +1,33 @@
+<?php
+// Database connection parameters
+$servername = "localhost"; // Change this to your database server if it's not localhost
+$username = "root"; // Change this to your MySQL username
+$password = ""; // Change this to your MySQL password
+$database = "my_database"; // Change this to your database name
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Sample data to insert into the table
+$age = 18;
+$name = "John Doe";
+$email = "john@example.com";
+$add = "aus";
+// SQL query to insert data into a table
+$sql = "INSERT INTO jay (age,name, email,address) VALUES ('$age','$name', '$email','$add')";
+
+// Execute query
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+// Close connection
+$conn->close();
+?>

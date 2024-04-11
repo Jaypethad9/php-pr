@@ -1,0 +1,15 @@
+<?php
+function reverseNumber($number) {
+    $reverse = 0;
+    while ($number > 0) {
+        $remainder = $number % 10;
+        $reverse = $reverse * 10 + $remainder;
+        $number = (int)($number / 10);
+    }
+    return $reverse;
+}
+
+$number = 12345; // Change this number to any desired value
+echo "Original number: $number <br>";
+echo "Reversed number: " . reverseNumber($number);
+?>

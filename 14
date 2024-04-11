@@ -1,0 +1,32 @@
+<?php
+// Database connection parameters
+$servername = "localhost"; // Change this to your database server if it's not localhost
+$username = "root"; // Change this to your MySQL username
+$password = ""; // Change this to your MySQL password
+$database = "my_database"; // Change this to your database name
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Sample data to update in the table
+$id = 1; // ID of the row to update
+$newName = "Jane Doe"; // New name to set
+
+// SQL query to update data in a table
+$sql = "UPDATE jay SET name='$newName' WHERE id=$id"; // Change 'your_table' to your table name
+
+// Execute query
+if ($conn->query($sql) === TRUE) {
+    echo "Record updated successfully";
+} else {
+    echo "Error updating record: " . $conn->error;
+}
+
+// Close connection
+$conn->close();
+?>
